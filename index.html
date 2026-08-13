@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone - Início</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- 1.1 Cabeçalho -->
+    <header class="header-principal">
+        <a href="index.html" class="logo" aria-label="Netflix Home">NETFLIX</a>
+        <nav class="menu-navegacao" aria-label="Navegação secundária">
+            <fieldset class="agrupador-idioma">
+                <label for="select-language" class="sr-only">Selecione o idioma</label>
+                <select id="select-language" class="select-idioma">
+                    <option value="pt">Português</option>
+                    <option value="en">English</option>
+                </select>
+            </fieldset>
+            <a href="pages/login.html" class="btn-entrar">Entrar</a>
+        </nav>
+    </header>
+
+    <!-- 1.2 Banner Principal (Hero Section) -->
+    <section class="hero-section">
+        <article class="hero-conteudo">
+            <h1 class="hero-titulo">Naruto: As Crônicas de Konoha</h1>
+            
+            <p class="hero-descricao">
+                Um jovem ninja com um grande poder selado dentro de si busca o reconhecimento da sua vila e o sonho de se tornar o maior líder de todos os tempos.
+            </p>
+            
+            <nav class="hero-botoes" aria-label="Ações do filme">
+                <a href="pages/login.html" class="btn-assistir">Assistir</a>
+                <a href="pages/login.html" class="btn-info">Mais Informações</a>
+            </nav>
+        </article>
+    </section>
+
+<!-- 1.3 Fileiras de Conteúdo (4 Categorias com 6 Cards cada) -->
+    <main class="conteudo-principal">
+
+        <!-- Categoria 1: Em Alta -->
+        <section class="fileira-categoria">
+            <h2>Em Alta</h2>
+            <ol class="cards-container">
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=1" alt="Capa do Filme 1" loading="lazy">
+                        </figure>
+                        <h3>Filme 1</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=2" alt="Capa do Filme 2" loading="lazy">
+                        </figure>
+                        <h3>Filme 2</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=3" alt="Capa do Filme 3" loading="lazy">
+                        </figure>
+                        <h3>Filme 3</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=4" alt="Capa do Filme 4" loading="lazy">
+                        </figure>
+                        <h3>Filme 4</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=5" alt="Capa do Filme 5" loading="lazy">
+                        </figure>
+                        <h3>Filme 5</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=6" alt="Capa do Filme 6" loading="lazy">
+                        </figure>
+                        <h3>Filme 6</h3>
+                    </article>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Categoria 2: Ação -->
+        <section class="fileira-categoria">
+            <h2>Ação</h2>
+            <ol class="cards-container">
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=7" alt="Capa do Filme de Ação 1" loading="lazy">
+                        </figure>
+                        <h3>Ação 1</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=8" alt="Capa do Filme de Ação 2" loading="lazy">
+                        </figure>
+                        <h3>Ação 2</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=9" alt="Capa do Filme de Ação 3" loading="lazy">
+                        </figure>
+                        <h3>Ação 3</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=10" alt="Capa do Filme de Ação 4" loading="lazy">
+                        </figure>
+                        <h3>Ação 4</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=11" alt="Capa do Filme de Ação 5" loading="lazy">
+                        </figure>
+                        <h3>Ação 5</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=12" alt="Capa do Filme de Ação 6" loading="lazy">
+                        </figure>
+                        <h3>Ação 6</h3>
+                    </article>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Categoria 3: Comédia -->
+        <section class="fileira-categoria">
+            <h2>Comédia</h2>
+            <ol class="cards-container">
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=13" alt="Capa do Filme de Comédia 1" loading="lazy">
+                        </figure>
+                        <h3>Comédia 1</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=14" alt="Capa do Filme de Comédia 2" loading="lazy">
+                        </figure>
+                        <h3>Comédia 2</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=15" alt="Capa do Filme de Comédia 3" loading="lazy">
+                        </figure>
+                        <h3>Comédia 3</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=16" alt="Capa do Filme de Comédia 4" loading="lazy">
+                        </figure>
+                        <h3>Comédia 4</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=17" alt="Capa do Filme de Comédia 5" loading="lazy">
+                        </figure>
+                        <h3>Comédia 5</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=18" alt="Capa do Filme de Comédia 6" loading="lazy">
+                        </figure>
+                        <h3>Comédia 6</h3>
+                    </article>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Categoria 4: Terror -->
+        <section class="fileira-categoria">
+            <h2>Terror</h2>
+            <ol class="cards-container">
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=19" alt="Capa do Filme de Terror 1" loading="lazy">
+                        </figure>
+                        <h3>Terror 1</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=20" alt="Capa do Filme de Terror 2" loading="lazy">
+                        </figure>
+                        <h3>Terror 2</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=21" alt="Capa do Filme de Terror 3" loading="lazy">
+                        </figure>
+                        <h3>Terror 3</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=22" alt="Capa do Filme de Terror 4" loading="lazy">
+                        </figure>
+                        <h3>Terror 4</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=23" alt="Capa do Filme de Terror 5" loading="lazy">
+                        </figure>
+                        <h3>Terror 5</h3>
+                    </article>
+                </li>
+                <li class="card-filme">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/300/170?random=24" alt="Capa do Filme de Terror 6" loading="lazy">
+                        </figure>
+                        <h3>Terror 6</h3>
+                    </article>
+                </li>
+            </ol>
+        </section>
+
+    </main>
+</body>
+</html>
