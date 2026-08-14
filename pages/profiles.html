@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Quem está assistindo?</title>
+    <link rel="stylesheet" href="../css/profiles.css">
+</head>
+<body class="profiles-body">
+    <!-- 3.1 Header Simples com a Logo -->
+    <header class="profiles-header">
+        <a href="../index.html" class="logo" aria-label="Netflix Home">NETFLIX</a>
+    </header>
+
+<main class="profiles-container">
+        <h1 class="profiles-title">Quem está assistindo?</h1>
+
+        <!-- Lista de Perfis organizada com Flexbox usando UL/LI (3.2 e 3.3) -->
+        <ul class="profiles-grid">
+            <li class="profile-item">
+                <a href="home.html" class="profile-card">
+                    <figure class="avatar-wrapper">
+                        <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Joao" alt="Avatar do João">
+                    </figure>
+                    <span class="profile-name">João</span>
+                </a>
+            </li>
+
+            <li class="profile-item">
+                <a href="home.html" class="profile-card">
+                    <figure class="avatar-wrapper">
+                        <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Maria" alt="Avatar da Maria">
+                    </figure>
+                    <span class="profile-name">Maria</span>
+                </a>
+            </li>
+
+            <li class="profile-item">
+                <a href="home.html" class="profile-card">
+                    <figure class="avatar-wrapper">
+                        <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Pedro" alt="Avatar do Pedro">
+                    </figure>
+                    <span class="profile-name">Pedro</span>
+                </a>
+            </li>
+
+            <li class="profile-item">
+                <a href="home.html" class="profile-card">
+                    <figure class="avatar-wrapper">
+                        <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Infantil" alt="Avatar Infantil">
+                    </figure>
+                    <span class="profile-name">Infantil</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- 3.4 Gerenciamento de Perfis -->
+        <nav class="profiles-actions" aria-label="Gerenciamento da conta">
+            <a href="#" class="btn-manage-profiles">Gerenciar perfis</a>
+        </nav>
+    </main>
+</body>
+</html>

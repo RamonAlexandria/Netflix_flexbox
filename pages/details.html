@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Detalhes do Filme</title>
+    <link rel="stylesheet" href="../css/details.css">
+</head>
+<body class="details-body">
+    <header class="home-header">
+        <nav class="nav-container" aria-label="Navegação Principal">
+            <a href="home.html" class="logo">NETFLIX</a>
+            <ul class="nav-links">
+                <li><a href="home.html">Início</a></li>
+                <li><a href="#">Séries</a></li>
+                <li><a href="#">Filmes</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Minha Lista</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-user" aria-label="Opções do Usuário">
+            <a href="profiles.html" class="profile-link" title="Trocar perfil">
+                <figure class="avatar-small">
+                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Joao" alt="Avatar do usuário">
+                </figure>
+            </a>
+        </nav>
+    </header>
+
+    <main class="details-main">
+
+        <!-- 5.1 Banner -->
+        <section class="details-banner">
+            <article class="banner-content">
+                <h1 class="banner-title">INTERSTELLAR</h1>
+                <ul class="banner-metadata">
+                    <li>2014</li>
+                    <li>2h 49min</li>
+                    <li class="badge-rating">10+</li>
+                    <li>Ficção Científica</li>
+                </ul>
+                <p class="banner-description">
+                    As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de verificar quais planetas podem conter a continuação da espécie humana.
+                </p>
+                <nav class="banner-buttons" aria-label="Ações rápidas">
+                    <a href="watch.html" class="btn-play">▶ Assistir</a>
+                    <a href="#" class="btn-list">+ Minha Lista</a>
+                </nav>
+            </article>
+        </section>
+
+        <!-- 5.2 Informações do Filme e 5.3 Botões -->
+        <section class="movie-info-section">
+            <article class="info-container">
+                
+                <figure class="movie-poster">
+                    <img src="https://picsum.photos/300/450?random=31" alt="Poster de Interstellar">
+                </figure>
+
+                <article class="movie-details-text">
+                    <h2>Interstellar</h2>
+                    <p class="full-description">
+                        Uma equipe de exploradores viaja através de um buraco de minhoca no espaço, na tentativa de garantir a sobrevivência da humanidade em um futuro onde a Terra está se tornando inabitável.
+                    </p>
+
+                    <ul class="meta-list">
+                        <li><strong>Diretor:</strong> Christopher Nolan</li>
+                        <li><strong>Elenco:</strong> Matthew McConaughey, Anne Hathaway, Jessica Chastain, Michael Caine</li>
+                        <li><strong>Gênero:</strong> Ficção Científica, Drama, Aventura</li>
+                        <li><strong>Ano de lançamento:</strong> 2014</li>
+                        <li><strong>Duração:</strong> 2h 49min</li>
+                    </ul>
+
+                    <nav class="action-buttons" aria-label="Navegação secundária">
+                        <a href="home.html" class="btn-back">⬅ Voltar para o Catálogo</a>
+                    </nav>
+                </article>
+
+            </article>
+        </section>
+
+        <!-- 5.4 Conteúdos Semelhantes (Você também pode gostar) -->
+        <section class="related-section" aria-label="Filmes Semelhantes">
+            <h2 class="section-title">Você também pode gostar</h2>
+            
+            <ul class="posters-grid">
+                <li class="poster-item">
+                    <a href="#">
+                        <figure class="poster-card">
+                            <img src="https://picsum.photos/300/450?random=32" alt="Poster de Duna">
+                            <figcaption class="movie-name">Duna</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="poster-item">
+                    <a href="#">
+                        <figure class="poster-card">
+                            <img src="https://picsum.photos/300/450?random=33" alt="Poster de Blade Runner 2049">
+                            <figcaption class="movie-name">Blade Runner 2049</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="poster-item">
+                    <a href="#">
+                        <figure class="poster-card">
+                            <img src="https://picsum.photos/300/450?random=34" alt="Poster de O Problema dos 3 Corpos">
+                            <figcaption class="movie-name">O Problema dos 3 Corpos</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="poster-item">
+                    <a href="#">
+                        <figure class="poster-card">
+                            <img src="https://picsum.photos/300/450?random=35" alt="Poster de Matrix">
+                            <figcaption class="movie-name">Matrix</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="poster-item">
+                    <a href="#">
+                        <figure class="poster-card">
+                            <img src="https://picsum.photos/300/450?random=36" alt="Poster de Dark Matter">
+                            <figcaption class="movie-name">Dark Matter</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="poster-item">
+                    <a href="#">
+                        <figure class="poster-card">
+                            <img src="https://picsum.photos/300/450?random=9" alt="Poster de Black Mirror">
+                            <figcaption class="movie-name">Black Mirror</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="home-footer">
+        <p>&copy; 2026 Netflix Clone - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

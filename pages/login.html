@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Entrar</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body class="login-body">
+    <!-- 1. Logo da plataforma -->
+    <header class="login-header">
+        <a href="../index.html" class="logo" aria-label="Netflix Home">NETFLIX</a>
+    </header>
+
+    <!-- Container Centralizado (Requisito 2.3 - Flexbox) -->
+    <main class="login-container">
+        <article class="login-card">
+            
+            <!-- 2. Título "Entrar" -->
+            <h1>Entrar</h1>
+
+            <!-- Form (Requisito 2.2) -->
+            <form class="login-form" action="profiles.html" method="GET">
+                
+                <!-- 3. Campo de e-mail -->
+                <p class="input-group">
+                    <input 
+                        type="text" 
+                        id="user-input" 
+                        required 
+                        placeholder=" "
+                        autocomplete="email"
+                    >
+                    <label for="user-input">Email ou número de telefone</label>
+                </p>
+
+                <!-- 4. Campo de senha -->
+                <p class="input-group">
+                    <input 
+                        type="password" 
+                        id="password-input" 
+                        required 
+                        placeholder=" "
+                        autocomplete="current-password"
+                    >
+                    <label for="password-input">Senha</label>
+                </p>
+
+                <!-- 5. Botão "Entrar" (Requisito 2.4 - Redireciona para perfis) -->
+                <button type="submit" class="btn-login-submit">Entrar</button>
+
+                <p class="login-ajuda">
+                    <!-- 6. Checkbox "Lembrar de mim" -->
+                    <label class="lembrar-me">
+                        <input type="checkbox" checked>
+                        <span>Lembrar de mim</span>
+                    </label>
+                    
+                    <!-- 7. Link "Esqueceu a senha?" -->
+                    <a href="#">Esqueceu a senha?</a>
+                </p>
+            </form>
+
+            <footer class="login-card-footer">
+                <!-- 8. Link "Ainda não possui uma conta?" -->
+                <p class="login-signup">
+                    <a href="../index.html">Ainda não possui uma conta?</a>
+                </p>
+                
+                <p class="login-recaptcha">
+                    Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a href="#">Saiba mais</a>.
+                </p>
+            </footer>
+        </article>
+    </main>
+
+    <!-- Rodapé da Tela de Login -->
+    <footer class="login-footer">
+        <p>Dúvidas? Ligue <a href="tel:08005912876">0800 591 2876</a></p>
+        <ul class="links-uteis">
+            <li><a href="#">Perguntas frequentes</a></li>
+            <li><a href="#">Central de Ajuda</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Preferências de cookies</a></li>
+            <li><a href="#">Informações corporativas</a></li>
+        </ul>
+        <fieldset class="agrupador-idioma">
+            <label for="select-language-footer" class="sr-only">Selecione o idioma</label>
+            <select id="select-language-footer" class="select-idioma">
+                <option value="pt">Português</option>
+                <option value="en">English</option>
+            </select>
+        </fieldset>
+    </footer>
+</body>
+</html>

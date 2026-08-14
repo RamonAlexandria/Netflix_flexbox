@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.details-body {
+  background-color: #141414;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Header */
+.home-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 68px;
+  padding: 0 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.home-header .logo {
+  color: #e50914;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.avatar-small {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #2b2b2b;
+  margin: 0;
+}
+
+.avatar-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 5.1 Banner de Destaque */
+.details-banner {
+  height: 65vh;
+  min-height: 450px;
+  background: linear-gradient(0deg, #141414 0%, rgba(20,20,20,0.6) 50%, rgba(0,0,0,0.8) 100%),
+              url('https://picsum.photos/1920/1080?random=31') center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 4% 40px 4%;
+}
+
+.banner-content {
+  max-width: 700px;
+}
+
+.banner-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.banner-metadata {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+.badge-rating {
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 1px 6px;
+  font-size: 0.8rem;
+  background-color: rgba(51,51,51,0.6);
+}
+
+.banner-description {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #dddddd;
+  margin-bottom: 25px;
+}
+
+/* Botões lado a lado com Flexbox */
+.banner-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-play, .btn-list {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-play {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.btn-play:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.btn-list {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: #ffffff;
+}
+
+.btn-list:hover {
+  background-color: rgba(109, 109, 110, 0.4);
+}
+
+/* 5.2 Seção de Informações do Filme (Organizada com Flexbox) */
+.movie-info-section {
+  padding: 40px 4%;
+  background-color: #181818;
+}
+
+.info-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.movie-poster {
+  flex: 0 0 260px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  margin: 0;
+}
+
+.movie-poster img {
+  width: 100%;
+  display: block;
+}
+
+.movie-details-text {
+  flex: 1;
+}
+
+.movie-details-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.full-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 25px;
+}
+
+.meta-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #aaaaaa;
+  margin-bottom: 30px;
+}
+
+.meta-list strong {
+  color: #ffffff;
+}
+
+/* 5.3 Botão Voltar */
+.action-buttons {
+  display: flex;
+}
+
+.btn-back {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.btn-back:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* 5.4 Você Também Pode Gostar */
+.related-section {
+  padding: 40px 4%;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.posters-grid {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+
+.posters-grid a {
+  text-decoration: none;
+}
+
+.poster-item {
+  flex: 0 0 auto;
+  width: 180px;
+}
+
+.poster-card {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0;
+  background-color: #1f1f1f;
+  transition: transform 0.3s ease;
+}
+
+.poster-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-name {
+  padding: 8px;
+  font-size: 0.9rem;
+  color: #cccccc;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.poster-card:hover {
+  transform: scale(1.05);
+}
+
+/* Rodapé */
+.home-footer {
+  padding: 30px 4%;
+  text-align: center;
+  color: #808080;
+  font-size: 0.85rem;
+  border-top: 1px solid #222222;
+  margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-poster {
+    flex: 0 0 auto;
+    width: 200px;
+  }
+
+  .banner-title {
+    font-size: 2.2rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
