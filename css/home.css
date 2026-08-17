@@ -11,7 +11,7 @@ body.home-body {
   overflow-x: hidden;
 }
 
-/* 4.1 Header com Flexbox */
+/* Header */
 .home-header {
   position: fixed;
   top: 0;
@@ -21,7 +21,7 @@ body.home-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
   z-index: 100;
 }
 
@@ -72,11 +72,11 @@ body.home-body {
   object-fit: cover;
 }
 
-/* 4.2 Banner Principal (Hero) */
+/* Banner Principal (Hero) */
 .hero-banner {
   height: 80vh;
   min-height: 500px;
-  background: linear-gradient(90deg, rgba(20,20,20,0.9) 0%, rgba(20,20,20,0.2) 60%, transparent 100%),
+  background: linear-gradient(90deg, rgba(20, 20, 20, 0.9) 0%, rgba(20, 20, 20, 0.2) 60%, transparent 100%),
               url('https://picsum.photos/1920/1080?random=99') center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -92,7 +92,7 @@ body.home-body {
   font-size: 3.5rem;
   font-weight: 800;
   margin: 10px 0 15px 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .hero-metadata {
@@ -106,10 +106,10 @@ body.home-body {
 }
 
 .badge-rating {
-  border: 1px solid rgba(255,255,255,0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   padding: 1px 6px;
   font-size: 0.8rem;
-  background-color: rgba(51,51,51,0.6);
+  background-color: rgba(51, 51, 51, 0.6);
 }
 
 .hero-description {
@@ -117,10 +117,10 @@ body.home-body {
   line-height: 1.4;
   color: #cccccc;
   margin-bottom: 25px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-/* 4.2 Botões lado a lado usando Flexbox */
+/* Botões do Hero */
 .hero-buttons {
   display: flex;
   gap: 15px;
@@ -154,10 +154,9 @@ body.home-body {
   background-color: rgba(109, 109, 110, 0.4);
 }
 
-/* 4.3 Categorias e 4.4 Cards */
+/* Catálogo e Seções - Margem igual ao Index */
 .catalog-section {
-  padding: 20px 4%;
-  margin-top: -60px;
+  padding: 40px 4% 20px 4%;
   position: relative;
   z-index: 10;
 }
@@ -173,70 +172,73 @@ body.home-body {
   color: #e5e5e5;
 }
 
-/* Organizados utilizando Flexbox (4.4) */
-.posters-grid {
+/* Lista de Cards sem barras de rolagem */
+.cards-list {
   list-style: none;
   display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  padding-bottom: 15px;
-  scroll-behavior: smooth;
+  gap: 10px;
+  overflow: hidden; /* Remove a barra de rolagem */
 }
 
-.posters-grid::-webkit-scrollbar {
-  height: 6px;
-}
-.posters-grid::-webkit-scrollbar-thumb {
-  background-color: #333333;
-  border-radius: 3px;
+/* 6 cards por fileira */
+.card-filme {
+  flex: 0 0 calc((100% - 50px) / 6);
+  min-width: 0;
 }
 
-.poster-item {
-  flex: 0 0 auto;
-  width: 180px;
-}
-
-/* Remoção do sublinhado do link dos cards */
-.poster-item a {
+.card-link {
   text-decoration: none;
   color: inherit;
   display: block;
 }
 
-.poster-card {
-  width: 100%;
+/* Card sem fundo escuro sob o texto */
+.card-filme article {
+  background-color: transparent; /* Removido o fundo escuro */
   border-radius: 4px;
   overflow: hidden;
-  margin: 0;
-  background-color: #1f1f1f;
   transition: transform 0.3s ease;
   cursor: pointer;
+  position: relative;
 }
 
-.poster-card img {
+.card-filme figure {
+  margin: 0;
   width: 100%;
-  height: 260px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.card-filme figure img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 4px;
 }
 
-.movie-name {
-  padding: 8px;
-  font-size: 0.9rem;
+/* Título embutido/transparente */
+.card-filme h3 {
+  padding: 6px 0;
+  font-size: 0.85rem;
+  font-weight: normal;
   color: #cccccc;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 0;
+  background: transparent;
 }
 
-/* Efeito visual ao passar o mouse .poster-card:hover (4.4) */
-.poster-card:hover {
-  transform: scale(1.08);
+/* Efeito ao passar o mouse */
+.card-filme article:hover {
+  transform: scale(1.05);
   z-index: 20;
 }
 
-.poster-card:hover .movie-name {
+.card-filme article:hover h3 {
   color: #ffffff;
 }
 
@@ -251,6 +253,12 @@ body.home-body {
 }
 
 /* Responsividade */
+@media (max-width: 1024px) {
+  .card-filme {
+    flex: 0 0 calc((100% - 30px) / 4);
+  }
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -264,11 +272,13 @@ body.home-body {
     font-size: 0.95rem;
   }
 
-  .poster-item {
-    width: 130px;
+  .card-filme {
+    flex: 0 0 calc((100% - 20px) / 3);
   }
+}
 
-  .poster-card img {
-    height: 195px;
+@media (max-width: 480px) {
+  .card-filme {
+    flex: 0 0 calc((100% - 10px) / 2);
   }
 }
