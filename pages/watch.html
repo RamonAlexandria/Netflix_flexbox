@@ -6,7 +6,120 @@
     <title>Netflix - Assistindo Interstellar</title>
     <link rel="stylesheet" href="../css/watch.css">
 </head>
-<body>
-    
+<body class="watch-body">
+    <header class="watch-header">
+        <nav class="nav-container" aria-label="Navegação do Player">
+            <a href="details.html" class="btn-back-player" title="Voltar aos detalhes">⬅ Voltar</a>
+            <a href="home.html" class="logo">NETFLIX</a>
+        </nav>
+    </header>
+
+    <main class="watch-main">
+
+        <!-- 6.1 Player e 6.2 Controles Visuais -->
+        <section class="player-section" aria-label="Reprodutor de Vídeo">
+            <figure class="video-container">
+                <!-- Tag <video> semântica com poster de prévia -->
+                <video poster="https://picsum.photos/1920/1080?random=31" preload="metadata">
+                    <source src="#" type="video/mp4">
+                    Seu navegador não suporta a reprodução deste vídeo.
+                </video>
+
+                <!-- Botão central de Play visual -->
+                <button type="button" class="center-play-btn" aria-label="Iniciar reprodução">▶</button>
+
+                <!-- 6.2 Barra de Controles Visuais estilizada via Flexbox -->
+                <nav class="player-controls" aria-label="Controles do Player">
+                    <button type="button" class="control-btn" aria-label="Play/Pause">▶</button>
+                    
+                    <!-- Barra de progresso trocada para a tag semântica <progress> -->
+                    <progress class="progress-bar" value="35" max="100" title="Progresso do vídeo"></progress>
+                    
+                    <span class="video-time">35:40 / 2:49:00</span>
+                    
+                    <button type="button" class="control-btn" aria-label="Volume">🔊</button>
+                    <button type="button" class="control-btn" aria-label="Configurações">⚙</button>
+                    <button type="button" class="control-btn" aria-label="Tela cheia">⛶</button>
+                </nav>
+            </figure>
+        </section>
+
+        <!-- 6.3 Informações do Filme -->
+        <section class="video-info-section">
+            <article class="video-info-content">
+                <h1 class="video-title">Interstellar</h1>
+                <p class="video-description">
+                    Uma equipe de exploradores viaja através de um buraco de minhoca no espaço, na tentativa de garantir a sobrevivência da humanidade em um futuro onde a Terra está se tornando inabitável.
+                </p>
+                <ul class="video-metadata">
+                    <li>2014</li>
+                    <li>Ficção Científica</li>
+                    <li>2h 49min</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- 6.4 Próximos Conteúdos -->
+        <section class="more-content-section" aria-label="Mais conteúdos para assistir">
+            <h2 class="section-title">Mais conteúdos para assistir</h2>
+
+            <ul class="posters-grid">
+                <li class="poster-item">
+                    <a href="details.html">
+                        <figure class="poster-card">
+                            <img src="https://picsum.photos/300/450?random=32" alt="Poster de Duna">
+                            <figcaption class="movie-name">Duna</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="poster-item">
+                    <a href="details.html">
+                        <figure class="poster-card">
+                            <img src="https://picsum.photos/300/450?random=33" alt="Poster de Blade Runner 2049">
+                            <figcaption class="movie-name">Blade Runner 2049</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="poster-item">
+                    <a href="details.html">
+                        <figure class="poster-card">
+                            <img src="https://picsum.photos/300/450?random=34" alt="Poster de O Problema dos 3 Corpos">
+                            <figcaption class="movie-name">O Problema dos 3 Corpos</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="poster-item">
+                    <a href="details.html">
+                        <figure class="poster-card">
+                            <img src="https://picsum.photos/300/450?random=35" alt="Poster de Matrix">
+                            <figcaption class="movie-name">Matrix</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="poster-item">
+                    <a href="details.html">
+                        <figure class="poster-card">
+                            <img src="https://picsum.photos/300/450?random=36" alt="Poster de Dark Matter">
+                            <figcaption class="movie-name">Dark Matter</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="poster-item">
+                    <a href="details.html">
+                        <figure class="poster-card">
+                            <img src="https://picsum.photos/300/450?random=9" alt="Poster de Black Mirror">
+                            <figcaption class="movie-name">Black Mirror</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="home-footer">
+        <p>&copy; 2026 Netflix Clone - Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>

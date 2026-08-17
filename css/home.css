@@ -196,6 +196,13 @@ body.home-body {
   width: 180px;
 }
 
+/* Remoção do sublinhado do link dos cards */
+.poster-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .poster-card {
   width: 100%;
   border-radius: 4px;

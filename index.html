@@ -4,41 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix Clone - Início</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- 1.1 Header -->
-    <header class="header-principal">
+<header class="header-principal">
         <a href="index.html" class="logo" aria-label="Netflix Home">NETFLIX</a>
         <nav class="menu-navegacao" aria-label="Navegação secundária">
-            <fieldset class="agrupador-idioma">
+            <p class="agrupador-idioma">
                 <label for="select-language" class="sr-only">Selecione o idioma</label>
                 <select id="select-language" class="select-idioma">
                     <option value="pt">Português</option>
                     <option value="en">English</option>
                 </select>
-            </fieldset>
-            <a href="pages/login.html" class="btn-entrar">Entrar</a>
+            </p>
+            <a href="pages/login.html" class="btn-entrar">
+                <i class="fa-solid fa-right-to-bracket"></i> Entrar
+            </a>
         </nav>
     </header>
 
-    <!-- 1.2 Banner Principal (Hero Section) -->
+    <!-- Banner Principal (Hero Section) -->
     <section class="hero-section">
         <article class="hero-conteudo">
-            <h1 class="hero-titulo">Naruto: As Crônicas de Konoha</h1>
+            <h1 class="hero-titulo">O Ritual do Silêncio</h1>
             
             <p class="hero-descricao">
-                Um jovem ninja com um grande poder selado dentro de si busca o reconhecimento da sua vila e o sonho de se tornar o maior líder de todos os tempos.
+                Em uma vila isolada e envolta em névoa, uma antiga maldição desperta quando os moradores quebram o juramento de nunca falar após o pôr do sol.
             </p>
             
             <nav class="hero-botoes" aria-label="Ações do filme">
-                <a href="pages/login.html" class="btn-assistir">Assistir</a>
-                <a href="pages/login.html" class="btn-info">Mais Informações</a>
+                <a href="pages/watch.html" class="btn-assistir">
+                    <i class="fa-solid fa-play"></i> Assistir
+                </a>
+                <a href="pages/details.html" class="btn-info">
+                    <i class="fa-solid fa-circle-info"></i> Mais Informações
+                </a>
             </nav>
         </article>
     </section>
 
-    <!-- 1.3 Categorias de Filmes (4 Categorias com 6 Cards cada) -->
+    <!-- Categorias de Filmes -->
     <main class="conteudo-principal">
 
         <!-- Categoria 1: Em Alta -->
@@ -46,231 +52,279 @@
             <h2>Em Alta</h2>
             <ol class="cards-container">
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=1" alt="Capa de O Último Reino" loading="lazy">
-                        </figure>
-                        <h3>O Último Reino</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/horror1/300/170" alt="Capa de O Culto das Sombras" loading="lazy">
+                            </figure>
+                            <h3>O Culto das Sombras</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=2" alt="Capa de Código Cobre" loading="lazy">
-                        </figure>
-                        <h3>Código Cobre</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/horror2/300/170" alt="Capa de O Labirinto do Medo" loading="lazy">
+                            </figure>
+                            <h3>O Labirinto do Medo</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=3" alt="Capa de Fronteiras do Espaço" loading="lazy">
-                        </figure>
-                        <h3>Fronteiras do Espaço</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/horror3/300/170" alt="Capa de Ecos da Escuridão" loading="lazy">
+                            </figure>
+                            <h3>Ecos da Escuridão</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=4" alt="Capa de O Mistério da Ilha" loading="lazy">
-                        </figure>
-                        <h3>O Mistério da Ilha</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/horror4/300/170" alt="Capa de O Castelo Amaldiçoado" loading="lazy">
+                            </figure>
+                            <h3>O Castelo Amaldiçoado</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=5" alt="Capa de Sombras do Passado" loading="lazy">
-                        </figure>
-                        <h3>Sombras do Passado</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/horror5/300/170" alt="Capa de Sombras do Passado" loading="lazy">
+                            </figure>
+                            <h3>Sombras do Passado</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=6" alt="Capa de Cidade Cyberpunk" loading="lazy">
-                        </figure>
-                        <h3>Cidade Cyberpunk</h3>
-                    </article>
-                </li>
-            </ol>
-        </section>
-
-        <!-- Categoria 2: Ação -->
-        <section class="fileira-categoria">
-            <h2>Ação</h2>
-            <ol class="cards-container">
-                <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=7" alt="Capa de Operação Resgate" loading="lazy">
-                        </figure>
-                        <h3>Operação Resgate</h3>
-                    </article>
-                </li>
-                <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=8" alt="Capa de Velozes e Perigosos" loading="lazy">
-                        </figure>
-                        <h3>Velozes e Perigosos</h3>
-                    </article>
-                </li>
-                <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=9" alt="Capa de Caçador de Recompensas" loading="lazy">
-                        </figure>
-                        <h3>Caçador de Recompensas</h3>
-                    </article>
-                </li>
-                <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=10" alt="Capa de Linha de Fogo" loading="lazy">
-                        </figure>
-                        <h3>Linha de Fogo</h3>
-                    </article>
-                </li>
-                <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=11" alt="Capa de Agente Secreto 00" loading="lazy">
-                        </figure>
-                        <h3>Agente Secreto 00</h3>
-                    </article>
-                </li>
-                <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=12" alt="Capa de Combate Final" loading="lazy">
-                        </figure>
-                        <h3>Combate Final</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/horror6/300/170" alt="Capa de A Noite Eterna" loading="lazy">
+                            </figure>
+                            <h3>A Noite Eterna</h3>
+                        </article>
+                    </a>
                 </li>
             </ol>
         </section>
 
-        <!-- Categoria 3: Comédia -->
+        <!-- Categoria 2: Sobrenatural -->
         <section class="fileira-categoria">
-            <h2>Comédia</h2>
+            <h2>Sobrenatural</h2>
             <ol class="cards-container">
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=13" alt="Capa de Vizinhos em Guerra" loading="lazy">
-                        </figure>
-                        <h3>Vizinhos em Guerra</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/ghost1/300/170" alt="Capa de A Entidade da Névoa" loading="lazy">
+                            </figure>
+                            <h3>A Entidade da Névoa</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=14" alt="Capa de Uma Viagem Louca" loading="lazy">
-                        </figure>
-                        <h3>Uma Viagem Louca</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/ghost2/300/170" alt="Capa de Vultos na Floresta" loading="lazy">
+                            </figure>
+                            <h3>Vultos na Floresta</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=15" alt="Capa de O Estagiário Cômico" loading="lazy">
-                        </figure>
-                        <h3>O Estagiário Cômico</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/ghost3/300/170" alt="Capa de Sussurros Noturnos" loading="lazy">
+                            </figure>
+                            <h3>Sussurros Noturnos</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=16" alt="Capa de Casamento Furado" loading="lazy">
-                        </figure>
-                        <h3>Casamento Furado</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/ghost4/300/170" alt="Capa de O Espelho das Almas" loading="lazy">
+                            </figure>
+                            <h3>O Espelho das Almas</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=17" alt="Capa de Troca de Identidade" loading="lazy">
-                        </figure>
-                        <h3>Troca de Identidade</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/ghost5/300/170" alt="Capa de Aparição Sinistra" loading="lazy">
+                            </figure>
+                            <h3>Aparição Sinistra</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=18" alt="Capa de Férias Frustradas" loading="lazy">
-                        </figure>
-                        <h3>Férias Frustradas</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/ghost6/300/170" alt="Capa de Almas Perdidas" loading="lazy">
+                            </figure>
+                            <h3>Almas Perdidas</h3>
+                        </article>
+                    </a>
                 </li>
             </ol>
         </section>
 
-        <!-- Categoria 4: Terror -->
+        <!-- Categoria 3: Psicológico e Slasher -->
         <section class="fileira-categoria">
-            <h2>Terror</h2>
+            <h2>Psicológico & Slasher</h2>
             <ol class="cards-container">
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=19" alt="Capa de A Casa na Colina" loading="lazy">
-                        </figure>
-                        <h3>A Casa na Colina</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/dark1/300/170" alt="Capa de O Ilusionista Obscuro" loading="lazy">
+                            </figure>
+                            <h3>O Ilusionista Obscuro</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=20" alt="Capa de O Ritual Noturno" loading="lazy">
-                        </figure>
-                        <h3>O Ritual Noturno</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/dark2/300/170" alt="Capa de Perseguição no Breu" loading="lazy">
+                            </figure>
+                            <h3>Perseguição no Breu</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=21" alt="Capa de Horas Sombrias" loading="lazy">
-                        </figure>
-                        <h3>Horas Sombrias</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/dark3/300/170" alt="Capa de A Mente Macabra" loading="lazy">
+                            </figure>
+                            <h3>A Mente Macabra</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=22" alt="Capa de O Chamado do Mal" loading="lazy">
-                        </figure>
-                        <h3>O Chamado do Mal</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/dark4/300/170" alt="Capa de Sem Saída" loading="lazy">
+                            </figure>
+                            <h3>Sem Saída</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=23" alt="Capa de Floresta Maldita" loading="lazy">
-                        </figure>
-                        <h3>Floresta Maldita</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/dark5/300/170" alt="Capa de O Sorriso das Sombras" loading="lazy">
+                            </figure>
+                            <h3>O Sorriso das Sombras</h3>
+                        </article>
+                    </a>
                 </li>
                 <li class="card-filme">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/300/170?random=24" alt="Capa de Invocação Profunda" loading="lazy">
-                        </figure>
-                        <h3>Invocação Profunda</h3>
-                    </article>
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/dark6/300/170" alt="Capa de Pesadelo Real" loading="lazy">
+                            </figure>
+                            <h3>Pesadelo Real</h3>
+                        </article>
+                    </a>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Categoria 4: Terror Clássico -->
+        <section class="fileira-categoria">
+            <h2>Terror Clássico</h2>
+            <ol class="cards-container">
+                <li class="card-filme">
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/mystery1/300/170" alt="Capa de A Casa na Colina" loading="lazy">
+                            </figure>
+                            <h3>A Casa na Colina</h3>
+                        </article>
+                    </a>
+                </li>
+                <li class="card-filme">
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/mystery2/300/170" alt="Capa de O Ritual Noturno" loading="lazy">
+                            </figure>
+                            <h3>O Ritual Noturno</h3>
+                        </article>
+                    </a>
+                </li>
+                <li class="card-filme">
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/mystery3/300/170" alt="Capa de Horas Sombrias" loading="lazy">
+                            </figure>
+                            <h3>Horas Sombrias</h3>
+                        </article>
+                    </a>
+                </li>
+                <li class="card-filme">
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/mystery4/300/170" alt="Capa de O Chamado do Mal" loading="lazy">
+                            </figure>
+                            <h3>O Chamado do Mal</h3>
+                        </article>
+                    </a>
+                </li>
+                <li class="card-filme">
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/mystery5/300/170" alt="Capa de Floresta Maldita" loading="lazy">
+                            </figure>
+                            <h3>Floresta Maldita</h3>
+                        </article>
+                    </a>
+                </li>
+                <li class="card-filme">
+                    <a href="pages/details.html" class="card-link">
+                        <article>
+                            <figure>
+                                <img src="https://picsum.photos/seed/mystery6/300/170" alt="Capa de Invocação Profunda" loading="lazy">
+                            </figure>
+                            <h3>Invocação Profunda</h3>
+                        </article>
+                    </a>
                 </li>
             </ol>
         </section>
 
     </main>
 
-    <!-- 1.5 Rodapé (Footer) -->
+    <!-- Rodapé -->
     <footer class="rodape-principal">
-        <div class="redes-sociais">
-            <a href="#" aria-label="Facebook">Facebook</a>
-            <a href="#" aria-label="Instagram">Instagram</a>
-            <a href="#" aria-label="Twitter">Twitter</a>
-            <a href="#" aria-label="YouTube">YouTube</a>
-        </div>
+        <nav class="redes-sociais" aria-label="Redes sociais">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i> YouTube</a>
+        </nav>
         
         <ul class="links-uteis">
             <li><a href="#">Idioma e Legendas</a></li>

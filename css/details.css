@@ -21,7 +21,7 @@ body.details-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
   z-index: 100;
 }
 
@@ -70,26 +70,27 @@ body.details-body {
   object-fit: cover;
 }
 
-/* 5.1 Banner de Destaque */
+/* 5.1 Banner de Detalhes */
 .details-banner {
-  height: 65vh;
+  height: 70vh;
   min-height: 450px;
-  background: linear-gradient(0deg, #141414 0%, rgba(20,20,20,0.6) 50%, rgba(0,0,0,0.8) 100%),
+  background: linear-gradient(90deg, rgba(20,20,20,0.95) 0%, rgba(20,20,20,0.4) 60%, transparent 100%),
               url('https://picsum.photos/1920/1080?random=31') center/cover no-repeat;
   display: flex;
-  align-items: flex-end;
-  padding: 0 4% 40px 4%;
+  align-items: center;
+  padding: 0 4%;
 }
 
 .banner-content {
-  max-width: 700px;
+  max-width: 650px;
+  margin-top: 50px;
 }
 
 .banner-title {
   font-size: 3.5rem;
   font-weight: 800;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 .banner-metadata {
@@ -111,20 +112,20 @@ body.details-body {
 
 .banner-description {
   font-size: 1.1rem;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #dddddd;
   margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
-/* Botões lado a lado com Flexbox */
 .banner-buttons {
   display: flex;
   gap: 15px;
 }
 
-.btn-play, .btn-list {
+.btn-play, .btn-list, .btn-back {
   display: inline-block;
-  padding: 12px 28px;
+  padding: 10px 24px;
   border-radius: 4px;
   font-weight: bold;
   font-size: 1rem;
@@ -150,7 +151,17 @@ body.details-body {
   background-color: rgba(109, 109, 110, 0.4);
 }
 
-/* 5.2 Seção de Informações do Filme (Organizada com Flexbox) */
+.btn-back {
+  background-color: #e50914;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.btn-back:hover {
+  background-color: #f40612;
+}
+
+/* 5.2 Seção de Informações do Filme */
 .movie-info-section {
   padding: 40px 4%;
   background-color: #181818;
@@ -160,18 +171,20 @@ body.details-body {
   display: flex;
   gap: 40px;
   align-items: flex-start;
+  max-width: 1200px;
 }
 
 .movie-poster {
-  flex: 0 0 260px;
+  flex: 0 0 250px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
   margin: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 .movie-poster img {
   width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -180,7 +193,7 @@ body.details-body {
 }
 
 .movie-details-text h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 15px;
 }
 
@@ -198,44 +211,22 @@ body.details-body {
   gap: 10px;
   font-size: 0.95rem;
   color: #aaaaaa;
-  margin-bottom: 30px;
 }
 
 .meta-list strong {
   color: #ffffff;
 }
 
-/* 5.3 Botão Voltar */
-.action-buttons {
-  display: flex;
-}
-
-.btn-back {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid #666;
-  border-radius: 4px;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-}
-
-.btn-back:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-/* 5.4 Você Também Pode Gostar */
+/* 5.4 Conteúdos Semelhantes */
 .related-section {
   padding: 40px 4%;
 }
 
 .section-title {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #e5e5e5;
 }
 
 .posters-grid {
@@ -244,15 +235,28 @@ body.details-body {
   gap: 15px;
   overflow-x: auto;
   padding-bottom: 15px;
+  scroll-behavior: smooth;
 }
 
-.posters-grid a {
-  text-decoration: none;
+.posters-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.posters-grid::-webkit-scrollbar-thumb {
+  background-color: #333333;
+  border-radius: 3px;
 }
 
 .poster-item {
   flex: 0 0 auto;
   width: 180px;
+}
+
+/* Remoção do sublinhado nos cards recomendados */
+.poster-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .poster-card {
@@ -262,6 +266,7 @@ body.details-body {
   margin: 0;
   background-color: #1f1f1f;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .poster-card img {
@@ -282,10 +287,14 @@ body.details-body {
 }
 
 .poster-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-/* Rodapé */
+.poster-card:hover .movie-name {
+  color: #ffffff;
+}
+
+/* Footer */
 .home-footer {
   padding: 30px 4%;
   text-align: center;
@@ -297,21 +306,24 @@ body.details-body {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .info-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .movie-poster {
-    flex: 0 0 auto;
-    width: 200px;
+  .nav-links {
+    display: none;
   }
 
   .banner-title {
     font-size: 2.2rem;
   }
 
-  .nav-links {
-    display: none;
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-poster {
+    width: 200px;
+  }
+
+  .movie-details-text {
+    text-align: center;
   }
 }

@@ -7,19 +7,18 @@
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body class="login-body">
-    <!-- 1. Logo da plataforma -->
-    <header class="login-header">
+ <header class="login-header">
         <a href="../index.html" class="logo" aria-label="Netflix Home">NETFLIX</a>
     </header>
 
-    <!-- Container Centralizado (Requisito 2.3 - Flexbox) -->
+    <!-- Container Centralizado -->
     <main class="login-container">
         <article class="login-card">
             
             <!-- 2. Título "Entrar" -->
             <h1>Entrar</h1>
 
-            <!-- Form (Requisito 2.2) -->
+            <!-- Form sem 'required' para liberar o clique em Entrar -->
             <form class="login-form" action="profiles.html" method="GET">
                 
                 <!-- 3. Campo de e-mail -->
@@ -27,7 +26,6 @@
                     <input 
                         type="text" 
                         id="user-input" 
-                        required 
                         placeholder=" "
                         autocomplete="email"
                     >
@@ -39,14 +37,13 @@
                     <input 
                         type="password" 
                         id="password-input" 
-                        required 
                         placeholder=" "
                         autocomplete="current-password"
                     >
                     <label for="password-input">Senha</label>
                 </p>
 
-                <!-- 5. Botão "Entrar" (Requisito 2.4 - Redireciona para perfis) -->
+                <!-- 5. Botão "Entrar" (Redireciona direto para profiles.html) -->
                 <button type="submit" class="btn-login-submit">Entrar</button>
 
                 <p class="login-ajuda">
