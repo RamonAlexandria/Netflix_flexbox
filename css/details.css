@@ -217,7 +217,7 @@ body.details-body {
   color: #ffffff;
 }
 
-/* 5.4 Conteúdos Semelhantes (Padronizado com home.html) */
+/* 5.4 Conteúdos Semelhantes (Rolagem + Padrão Visual Sincronizado) */
 .related-section {
   padding: 40px 4%;
 }
@@ -229,18 +229,39 @@ body.details-body {
   color: #e5e5e5;
 }
 
-/* Container de cards sem scrollbar horizontal */
+/* Container de cards com rolagem horizontal ativa */
 .posters-grid {
   list-style: none;
   display: flex;
   gap: 10px;
-  overflow: hidden;
-  padding-bottom: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
+/* Barra de rolagem estilizada de forma discreta */
+.posters-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.posters-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.posters-grid::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 4px;
+}
+
+/* Dimensionamento dos itens mantendo o padrão e ativando o scroll */
 .poster-item {
-  flex: 0 0 calc((100% - 50px) / 6);
-  min-width: 0;
+  flex: 0 0 16vw;
+  min-width: 200px;
+  scroll-snap-align: start;
 }
 
 .poster-item a {
@@ -263,7 +284,7 @@ body.details-body {
 
 .poster-card img {
   width: 100%;
-  aspect-ratio: 16 / 9; /* Ajustado para 16/9 para ficar idêntico ao index e home */
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
   border-radius: 4px;
@@ -281,7 +302,7 @@ body.details-body {
   background: transparent;
 }
 
-/* Efeito Hover sincronizado com home/index */
+/* Efeito Hover sincronizado com as outras páginas */
 .poster-card:hover {
   transform: scale(1.05);
   z-index: 20;
@@ -304,7 +325,8 @@ body.details-body {
 /* Responsividade */
 @media (max-width: 1024px) {
   .poster-item {
-    flex: 0 0 calc((100% - 30px) / 4);
+    flex: 0 0 24vw;
+    min-width: 170px;
   }
 }
 
@@ -331,12 +353,29 @@ body.details-body {
   }
 
   .poster-item {
-    flex: 0 0 calc((100% - 20px) / 3);
+    flex: 0 0 32vw;
+    min-width: 150px;
   }
 }
 
 @media (max-width: 480px) {
   .poster-item {
-    flex: 0 0 calc((100% - 10px) / 2);
+    flex: 0 0 45vw;
+    min-width: 130px;
   }
 }
+
+
+/*----------------------------------------------------------------------------*/
+
+.poster-card,
+.card-filme article {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.poster-card:hover,
+.card-filme article:hover {
+  transform: scale(1.05);
+  z-index: 20;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9), 0 0 12px rgba(0, 0, 0, 0.6);

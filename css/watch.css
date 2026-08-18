@@ -184,7 +184,7 @@ progress.progress-bar::-moz-progress-bar {
   color: #888888;
 }
 
-/* 6.4 Mais Conteúdos para Assistir (Padronizado com Home e Details) */
+/* 6.4 Mais Conteúdos para Assistir (Rolagem Horizontal Ativa e Sincronizada) */
 .more-content-section {
   padding: 40px 4%;
 }
@@ -200,13 +200,32 @@ progress.progress-bar::-moz-progress-bar {
   list-style: none;
   display: flex;
   gap: 10px;
-  overflow: hidden;
-  padding-bottom: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.posters-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.posters-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.posters-grid::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 4px;
 }
 
 .poster-item {
-  flex: 0 0 calc((100% - 50px) / 6);
-  min-width: 0;
+  flex: 0 0 16vw;
+  min-width: 200px;
+  scroll-snap-align: start;
 }
 
 .poster-item a {
@@ -269,7 +288,8 @@ progress.progress-bar::-moz-progress-bar {
 /* Responsividade */
 @media (max-width: 1024px) {
   .poster-item {
-    flex: 0 0 calc((100% - 30px) / 4);
+    flex: 0 0 24vw;
+    min-width: 170px;
   }
 }
 
@@ -288,12 +308,29 @@ progress.progress-bar::-moz-progress-bar {
   }
 
   .poster-item {
-    flex: 0 0 calc((100% - 20px) / 3);
+    flex: 0 0 32vw;
+    min-width: 150px;
   }
 }
 
 @media (max-width: 480px) {
   .poster-item {
-    flex: 0 0 calc((100% - 10px) / 2);
+    flex: 0 0 45vw;
+    min-width: 130px;
   }
 }
+
+
+/*----------------------------------------------------------------------------*/
+
+.poster-card,
+.card-filme article {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.poster-card:hover,
+.card-filme article:hover {
+  transform: scale(1.05);
+  z-index: 20;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9), 0 0 12px rgba(0, 0, 0, 0.6);
