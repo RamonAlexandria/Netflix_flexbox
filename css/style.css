@@ -349,3 +349,7 @@ body {
     flex: 0 0 50%;
   }
 }
+
+.centralizar {
+  text-align: center;
+}
